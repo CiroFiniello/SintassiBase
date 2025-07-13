@@ -1,5 +1,4 @@
 ﻿using System;
-
 class Program
 {
     static void Main()
@@ -14,5 +13,16 @@ class Program
 
         Console.WriteLine("Inserisci il secondo numero");
         numero2 = float.Parse(Console.ReadLine());
+
+        float somma = numero1 + numero2;
+        Console.WriteLine($"La somma è: {somma}");
+        if (SintassiBase.InputValidator.IsIntero(somma))
+        {
+            Console.WriteLine("La somma è un numero intero");
+        }
+        else
+        {
+            Console.WriteLine("La somma non è un numero intero");
+        }
     }
 }
